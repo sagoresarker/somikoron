@@ -14,6 +14,7 @@ class CustomUser(AbstractUser):
     username = models.CharField(max_length=200, unique=True)
     email = models.EmailField(unique=True)
     gender = models.IntegerField(choices=GENDER, default=2)
+    phone = models.IntegerField(blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
